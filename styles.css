@@ -1,15 +1,16 @@
-.container {
-    background-color: blue;
+.container-fluid {
+    
 }
-.folder-view-color {
-    background-color: aquamarine;
+.email-folder-view-col {
+  
    
 
 }
-.emails-view-color {
-    background-color: bisque;
+.email-view-col {
+    
   
 }
-.email-reply-view-color {
-    background-color: blueviolet;
+.email-reply-view-col {
+  
 }
+
