@@ -62,3 +62,15 @@ Added Compose button
 Installed font awesome
 Tested some columon size based on break point
 
+9/28/2023
+1:50PM - 2:33PM
+Changed compose button to a modal button
+Change background color to grey
+
+9/28/2023
+
+Removed Padding from columns
+Changed the folder display colum to use 2 units from breakpoints md and up
+Added detective logo to navbar
+Added two hamburger offcanvass components to navbar
+Configured offcanvass to show up on left and right side of screen

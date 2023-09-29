@@ -10,33 +10,112 @@
 <body>
     <!--Main Container-->
     <div class="container-fuid">
+      
       <!-- Nav Bar Config-->
-        <nav class="navbar navbar-expand bg-body-tertiary">
-            <div class="container-fluid">
-              
-             
-              <a class="navbar-brand" href="#">Detective Email</a>
-          
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search Emails" aria-label="Search">
-                  <button class="btn btn-info" type="submit">Search</button>
-                </form>
-                
-              
-              
-            </div>
-          
-        </nav>
 
+        <nav class="navbar bg-body-tertiary">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasHamburger" aria-controls="offcanvasHamburger" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-user-secret fa-xl"></i></a>
+
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search Emails" aria-label="Search Emails">
+              <button class="btn btn-info" type="submit">Search</button>
+            </form>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMeatball" aria-controls="offcanvasMeatball" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasHamburger" aria-labelledby="offcanvasHamburgerLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Email Folders</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#emailReplyModal">
+                      Compose <i class="fa-solid fa-envelope"></i>
+                    </button>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">INBOX</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">SENT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">SPAM</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">TRASH</a>
+                  </li>
+                </ul>
+               
+              </div>
+            </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMeatball" aria-labelledby="offcanvasMeatballLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Account</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-user"></i>  Username</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Sign Out</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Change Profile</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Terms of Service</a>
+                  </li>
+                </ul>
+               
+              </div>
+            </div>
+          </div>
+        </nav>
         
         <!--First Row-->
-        <div class="row">
+        <div class="row d-flex justify-content-center">
             <!--Email Folder View Column -->
-            <div class="col col-md-3 email-folder-view-col d-none d-md-block d-flex justify-content-center ">
-                <div class="card" style="width: 18rem;">
+            <div class="col col-md-2 email-folder-view-col p-0 d-none d-md-block d-flex justify-content-center">
+                <div class="card" style="width: 10rem;">
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item">
-                        <button type="button" class="btn btn-primary">Compose  <i class="fa-solid fa-envelope"></i></button>
+                    
+                        <!-- Compose Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#emailReplyModal">
+                          Compose <i class="fa-solid fa-envelope"></i>
+                        </button>
+
+                        <!-- Email Reply Modal -->
+                        <div class="modal fade" id="emailReplyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Compose Email</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                To: 
+                                From: Andrew@detectiveemail.com
+                                
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Send Email <i class="fa-solid fa-paper-plane"></i></button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </li>
                       <li class="list-group-item active">INBOX</li>
                       <li class="list-group-item">SENT</li>
@@ -47,11 +126,12 @@
                   </div>
             </div>
             <!-- Email View Column -->
-            <div class="col email-view-col d-flex justify-content-center">
-                <div class="card" style="width: 18rem;">
+            <div class="col email-view-col d-flex p-0 justify-content-center">
+                <div class="card" style="width: 25rem;">
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        Email #1
+                      <li class="list-group-item active">
+                        From: Johnny Smith                                              9/27/2023
+                        Subject: Great News! Your application has been accepted!
                       </li>
                       <li class="list-group-item">
                         Email #2
@@ -65,15 +145,17 @@
 
             </div>
             <!--Email Reply/Compose column -->
-            <div class="col-6 email-reply-view-col d-none d-lg-block">
+            <div class="col email-reply-view-col p-0 d-none d-lg-block">
                 <div class="card">
                     <div class="card-body border">
-                      Email Contents
+                      <span>From: Johnny Smith</span> <span>Time/Date</span>
+                      <h5>Great News! Your application has been accepted!</h5>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa maxime nostrum rem illo quae aspernatur maiores optio ab molestiae ipsum impedit tenetur sed officia, voluptates consectetur dolor totam accusantium praesentium!</p>
                     </div>
-                    <div class="card-body border">
-                        Reply Box
+                    <div class="mb-3">
+                  
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Reply...."></textarea>
                     </div>
-                    <div> 
                       <button type="button" class="btn btn-primary">Send</button>
                     </div> 
                       
