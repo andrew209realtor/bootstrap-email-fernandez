@@ -68,9 +68,16 @@ Changed compose button to a modal button
 Change background color to grey
 
 9/28/2023
-
+9:17PM-10:50PM
 Removed Padding from columns
 Changed the folder display colum to use 2 units from breakpoints md and up
 Added detective logo to navbar
 Added two hamburger offcanvass components to navbar
 Configured offcanvass to show up on left and right side of screen
+
+9/29/2023
+10:09pm-11:20PM
+changed the hamburger icon to font awesome kebob icon
+removed the style for the width on the cards in all of the columns
+configured the hamburger menu to disply on small screen breakpoint
+added font awesome paperclip icon to attach in email compose modal
