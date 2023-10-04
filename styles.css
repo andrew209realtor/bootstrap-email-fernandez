@@ -10,3 +10,8 @@
 .email-folder-view-col, .email-view-col, .email-reply-view-col {
   background-color: grey;
 
+}
+.email-view {
+  height: 200px;
+  width: 400px;
+}

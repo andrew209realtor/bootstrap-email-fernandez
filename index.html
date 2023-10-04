@@ -18,7 +18,7 @@
             <button class="navbar-toggler d-block d-sm-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasHamburger" aria-controls="offcanvasHamburger" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#"><i class="fa-solid fa-user-secret fa-xl"></i></a>
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-user-secret fa-xl"></i>DetectiveEmail</a>
 
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search Emails" aria-label="Search Emails">
@@ -131,11 +131,18 @@
             </div>
             <!-- Email View Column -->
             <div class="col email-view-col d-flex p-0 justify-content-center">
-                <div class="card">
+                <!-- <div class="card email-card">
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item active">
-                        From: Johnny Smith                                              9/27/2023
-                        Subject: Great News! Your application has been accepted!
+                        <div class="card-body">
+
+                          <div class="card-header">From: Johnny Smith</div>
+
+
+                          <h5 class="card-title">Great News! Your application has been accepted!</h5>
+                          
+                        </div>
+                      
                       </li>
                       <li class="list-group-item">
                         Email #2
@@ -145,9 +152,14 @@
                       </li>
                       
                     </ul>
-                  </div>
+                  </div> -->
+                <ul class="email-view">
+                  <li>From:</li>
+                  <li>Subject</li>
+                </ul>
 
-            </div>
+          
+
             <!--Email Reply/Compose column -->
             <div class="col email-reply-view-col p-0 d-none d-lg-block">
                 <div class="card">
