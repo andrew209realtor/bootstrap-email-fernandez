@@ -81,3 +81,9 @@ changed the hamburger icon to font awesome kebob icon
 removed the style for the width on the cards in all of the columns
 configured the hamburger menu to disply on small screen breakpoint
 added font awesome paperclip icon to attach in email compose modal
+
+10/3/2023
+8:22PM-9:29PM
+Changed the card layout into a container to better space out my elements within the cards
+Changed the compose modal to lie outside of main container so in can display on phone screen
+
